@@ -154,19 +154,31 @@ In priority order:
 
 **Stop and refactor when you see:**
 
-| Smell | Solution |
-|-------|----------|
-| Long Method | Extract methods, compose method pattern |
-| Large Class | Extract class, single responsibility |
-| Long Parameter List | Introduce parameter object |
-| Divergent Change | Split into focused classes |
-| Shotgun Surgery | Move related code together |
-| Feature Envy | Move method to the envied class |
-| Data Clumps | Extract class for grouped data |
-| Primitive Obsession | Wrap in value objects |
-| Switch Statements | Replace with polymorphism |
-| Parallel Inheritance | Merge hierarchies |
-| Speculative Generality | YAGNI - remove unused abstractions |
+| Smell | Refactoring Techniques |
+|---|---|
+| Long Method | Extract Method, Replace Temp with Query, Introduce Parameter Object, Preserve Whole Object, Replace Method with Method Object, Decompose Conditional |
+| Large Class | Extract Class, Extract Subclass, Extract Interface, Duplicate Observed Data when UI and domain responsibilities are mixed |
+| Primitive Obsession | Replace Data Value with Object, Introduce Parameter Object, Preserve Whole Object, Replace Type Code with Class, Replace Type Code with Subclasses, Replace Type Code with State/Strategy, Replace Array with Object |
+| Long Parameter List | Replace Parameter with Method Call, Preserve Whole Object, Introduce Parameter Object |
+| Data Clumps | Extract Class, Introduce Parameter Object, Preserve Whole Object, Move related behavior into the new class as well |
+| Switch Statements | Extract Method, Move Method, Replace Type Code with Subclasses, Replace Type Code with State/Strategy, Replace Conditional with Polymorphism, Replace Parameter with Explicit Methods, Introduce Null Object |
+| Temporary Field | Extract Class, Replace Method with Method Object, Introduce Null Object for existence checks when appropriate |
+| Refused Bequest | Replace Inheritance with Delegation, Extract Superclass for the genuinely shared part |
+| Alternative Classes with Different Interfaces | Rename Method, Move Method, Add Parameter, Parameterize Method, Extract Superclass, Delete one class if convergence makes it redundant |
+| Divergent Change | Extract Class, Extract Superclass, Extract Subclass |
+| Shotgun Surgery | Move Method, Move Field, Inline Class, Create a new home for the behavior if necessary |
+| Parallel Inheritance Hierarchies | Make objects in one hierarchy refer to objects in the other, Then use Move Method and Move Field to collapse one hierarchy |
+| Comments | Extract Variable, Extract Method, Rename Method, Introduce Assertion |
+| Duplicate Code | Extract Method, Pull Up Field, Pull Up Constructor Body, Form Template Method, Substitute Algorithm, Extract Superclass, Extract Class, Consolidate Conditional Expression, Consolidate Duplicate Conditional Fragments |
+| Lazy Class | Inline Class, Collapse Hierarchy |
+| Data Class | Encapsulate Field, Encapsulate Collection, Move Method, Extract Method, Remove Setting Method, Hide Method |
+| Dead Code | Delete unused code, Inline Class, Collapse Hierarchy, Remove Parameter |
+| Speculative Generality | Collapse Hierarchy, Inline Class, Inline Method, Remove Parameter, Delete unused fields |
+| Feature Envy | Move Method, Extract Method |
+| Inappropriate Intimacy | Move Method, Move Field, Extract Class, Hide Delegate, Change Bidirectional Association to Unidirectional, In some inheritance cases, Replace Delegation with Inheritance may apply |
+| Message Chains | Hide Delegate, Extract Method, Move Method |
+| Middle Man | Remove Middle Man |
+| Incomplete Library Class | Introduce Foreign Method for a small missing helper, Introduce Local Extension for broader missing behavior |
 
 See: [references/code-smells.md](references/code-smells.md)
 
