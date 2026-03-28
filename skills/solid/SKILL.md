@@ -172,9 +172,9 @@ See: [references/code-smells.md](references/code-smells.md)
 
 ## Design Patterns Awareness
 
-**Creational:** Singleton, Factory, Builder, Prototype
-**Structural:** Adapter, Bridge, Decorator, Composite, Proxy
-**Behavioral:** Strategy, Observer, Template Method, Command
+**Creational:** Factory Method, Abstract Factory, Builder, Prototype, Singleton
+**Structural:** Adapter, Bridge, Composite, Decorator, Facade, Flyweight, Proxy
+**Behavioral:** Chain of Responsibility, Command, Iterator, Mediator, Memento, Observer, State, Strategy, Template Method, Visitor
 
 **Warning:** Don't force patterns. Let them emerge from refactoring.
 
